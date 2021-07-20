@@ -44,7 +44,8 @@ document.querySelector('.b-3').onclick = f3;
 
 
 // Task 4. 
-// Пользователь вводит в .i-4 год своего рождения. Есть кнопка .b-4 которая запускает функцию f4. Функция должна вывести в .out-4 число 1 если пользователю больше или равно 18 лет, и 0 если меньше.
+// Пользователь вводит в .i-4 год своего рождения. Есть кнопка .b-4 которая запускает функцию f4.
+// Функция должна вывести в .out-4 число 1 если пользователю больше или равно 18 лет, и 0 если меньше.
 
 function f4() {
     let i4 = document.querySelector('.i-4').value;
@@ -64,7 +65,7 @@ function f5() {
     let out5 = document.querySelector('.out-5');
     if (i5 < 0) {
         out5.innerHTML = 'm';
-    } else if (i5 == 0) {
+    } else if (i5 === 0) {
         out5.innerHTML = '0';
     } else if (i5 >= 1) {
         out5.innerHTML = '1';
@@ -82,9 +83,7 @@ document.querySelector('.b-5').onclick = f5;
 function f6() {
     let i6 = document.querySelector('.i-6').value;
     let out6 = document.querySelector('.out-6');
-    if (i6 % 2 === 0) {
-        out6.innerHTML = 'even';
-    } else out6.innerHTML = 'odd';
+    i6 % 2 === 0 ? out6.innerHTML = 'odd' : out6.innerHTML = 'even';
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -211,19 +210,20 @@ function f14() {
     const out = document.querySelector('.out-14');
     switch (selector) {
         case "+" :
-            const updateOutput = () => out.innerHTML = i141 + i142;
+            const sum = i141 + i142;
+            out.innerHTML = sum.toString();
             break;
         case "-" :
             const minus = i141 - i142;
-            out.innerHTML = minus;
+            out.innerHTML = minus.toString();
             break;
         case "*" :
             const multiply = i141 * i142;
-            out.innerHTML = multiply;
+            out.innerHTML = multiply.toString();
             break;
         case "/" :
             const divide = i141 / i142;
-            out.innerHTML = divide;
+            out.innerHTML = divide.toString();
             break;
     }
 
@@ -243,10 +243,9 @@ function f15() {
     let sel1 = document.querySelector('.s-151').value;
     let sel2 = document.querySelector('.s-152').value;
     let sel3 = document.querySelector('.s-153').value;
-    let out = document.querySelector('.out-15')
+    let out = document.querySelector('.out-15');
 
     sel3 === '&&' ? out.innerHTML = sel1 && sel2 : out.innerHTML = sel1 || sel2;
-
 }
 
 document.querySelector('.b-15').onclick = f15;
