@@ -1,53 +1,39 @@
-// console.log("Hello" + " world");
+// let div = document.querySelectorAll('.one');
+// console.log(div);
+// // div.style.backgroundColor = 'red';
 //
-// document.getElementById('out').innerHTML = 'Hello';
-// document.getElementById('out').innerHTML = '2019';
-// document.getElementById('out').innerHTML = '<b>2020</b>';
-// document.getElementById("one").innerHTML = 888;
+// for (let i = 0; i < div.length; i = i + 1) {
+//     console.log(div[i]);
+//     div[i].style.background = 'red';
+//     div[i].onclick = two;
+// }
 //
-// document.querySelector('.header').innerHTML = 5;
-// document.querySelector("#one").innerHTML = "<b>777</b>";
-
-// const fun = (a) => {
-//     if (a > 9) {
-//         console.log("yes");
-//     } else console.log("not");
+// function two() {
+//     console.log('work hard!!! - fuck more!!!');
 // };
-
-const buttonOK = document.querySelector('button');
-const input = document.querySelector('.age');
 //
-// buttonOK.onclick = () => {
-//     let num = +input.value;
-//     if (num >= 16 && num < 60) {
-//         console.log("Welcome");
-//     } else if (num > 60 && num < 100) {
-//         console.log("Ты точно сюда?");
-//     } else if (num >= 100) {
-//         console.log("Староват");
-//     } else console.log("Не пройдешь");
-// };
+// let b = document.getElementsByClassName('one');
+// let c = document.getElementsByTagName('div')
+// console.log(b)
+// console.log(c)
+//
+// for (let i = 0; i < b.length; i++) {
+// b[i].style.border = '3px solid black'
+// }
 
-
-buttonOK.onclick = () => {
-    let num = +input.value;
-    switch (num) {
-        case 15:
-            console.log("Еще 3 года потерпи");
-            break;
-        case 16:
-            console.log("Еще 2 года потерпи");
-            break
-        case 18:
-            console.log("Заходи");
-        default:
-            console.log("оооок")
+document.querySelector('button').onclick = () => {
+    let r = document.querySelectorAll('input[type="radio"]');
+    console.log(r);
+    for (let i = 0; i < r.length; i++) {
+        if (r[i].checked) {
+            console.log(r[i].value);
+        }
     }
-
 };
-
-
-let b = 5;
-
-
+let out = '';
+for (let i = 0; i < 30; i++) {
+    out += i + ' ';
+    if (i === 6) continue;
+}
+document.querySelector('#out').innerHTML = out;
 
