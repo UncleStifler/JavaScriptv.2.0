@@ -102,7 +102,8 @@ function t7() {
     // у вас есть функция t6, которая может генерировать случайные целые числа в нужном диапазоне. 
     // давайте воспользуемся ней. Просто запустим ее три раза внутри строки ниже
     //return `rgb(${t6(0,255)}....допишите сами
-    return console.log(`rgb(${t6(0, 255)},${t6(0, 255)},${t6(0, 255)})`);
+
+    return `rgb(${t6(0, 255)},${t6(0, 255)},${t6(0, 255)})`;
 }
 
 document.querySelector('.b-7').onclick = function () {
@@ -130,11 +131,12 @@ document.querySelector('.b-8').onclick = function () {
 // Напишите функцию t9, которая принимает число и возвращает true, если число четное, и false если не четное. 
 
 function t9(num) {
-    return (num % 2 === 0).toString();
+    return (num % 2 === 0) ? 'true' : 'false'
+
 }
 
 document.querySelector('.b-9').onclick = function () {
-    document.querySelector('.out-9').textContent = t9(15);
+    document.querySelector('.out-9').textContent = t9(99);
 };
 
 
@@ -142,10 +144,10 @@ document.querySelector('.b-9').onclick = function () {
 // Создайте функцию t10, которая принимает 2 числа и возвращает большее из них.В случае равенства - первое.
 
 function t10(x, y) {
-    let max = Math.max(x, y).toString();
-    return x === y ? x : max
+    let max = Math.max(x, y);
+    return x === y ? x : max;
 }
 
 document.querySelector('.b-10').onclick = function () {
-    document.querySelector('.out-10').textContent = t10(3, 9);
+    document.querySelector('.out-10').textContent = t10(333, 1265);
 };

@@ -139,7 +139,14 @@ document.querySelector('.b-7').onclick = () => {
 let a8 = [3, 14, 15, 92, 7, 32, 59];
 
 function t8() {
-    a8_res = a8.map((item, index) => index);
+    let out = [];
+    a8_res = a8.map((elem, index) => {
+        if (elem % 2 === 0) {
+            out.push(index);
+            return out;
+        }
+    });
+    a8_res = out;
     return a8_res;
 }
 
@@ -299,9 +306,9 @@ let a15 = [
 
 
 function t15() {
-    let a15_res
-    a15_res = a15.filter( t =>  t.pnum !== '' && t.pnum.length > 6)
-    return a15_res
+    let a15_res;
+    a15_res = a15.filter(t => t.pnum !== '' && t.pnum.length === 6);
+    return a15_res;
 }
 
 document.querySelector('.b-15').onclick = () => {

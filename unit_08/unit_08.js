@@ -4,10 +4,10 @@
 //     1_2_3_4_5_6_7_8_9_ ... 49_50_
 // от 1 до 50 включительно. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
-let out = '';
 
 function t1() {
-    let a = 0;
+    let out = '';
+    let a = 1;
     while (a < 51) {
         out += `${a}_`;
         a++;
@@ -23,6 +23,7 @@ document.querySelector('.b-1').onclick = t1;
 // от 2 до 46 c шагом 2. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла  while.
 
 function t2() {
+    let out = '';
     let a = 2;
     while (a < 47) {
         out += `${a}_`;
@@ -40,6 +41,7 @@ document.querySelector('.b-2').onclick = t2;
 // от 25 до 7 c шагом 1. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла  while.
 
 function t3() {
+    let out = '';
     let a = 25;
     while (a > 6) {
         out += `${a}_`;
@@ -57,6 +59,7 @@ document.querySelector('.b-3').onclick = t3;
 
 
 function t4() {
+    let out = '';
     let a = 77;
     while (a > 34) {
         out += `${a}_`;
@@ -74,6 +77,7 @@ document.querySelector('.b-4').onclick = t4;
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и одна звездочка если число нечетное, и две звездочки если четное. Задача решается с помощью цикла  while.
 
 function t5() {
+    let out = '';
     let a = 1;
     while (a < 18) {
         a % 2 === 0 ? out += `${a}_**` : out += `${a}_*`;
@@ -94,11 +98,12 @@ document.querySelector('.b-5').onclick = t5;
 // Количество строк (итераций, повторений) цикла  while вводит пользователь в .i-6.
 
 function t6() {
+    let out = '';
     let i6 = document.querySelector('.i-6').value;
     let a = 1;
     while (a < i6) {
         let z = 0;
-        while (z < i6) {
+        while (z < 6) {
             out += `*`;
             z++;
         }
@@ -119,6 +124,7 @@ document.querySelector('.b-6').onclick = t6;
 // Задача решается с помощью цикла  while.
 
 function t7() {
+    let out = '';
     let i7 = document.querySelector('.i-7').value;
     while (i7 >= 0) {
         out += `${i7}_`;
@@ -139,6 +145,7 @@ document.querySelector('.b-7').onclick = t7;
 // Задача решается с помощью цикла  while.
 
 function t8() {
+    let out = '';
     let i81 = document.querySelector('.i-81').value;
     let i82 = document.querySelector('.i-82').value;
     let max = Math.max(i81, i82);
@@ -163,6 +170,7 @@ document.querySelector('.b-8').onclick = t8;
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку и при необходимости поменять местами значения в переменных местами, а потом запускаем цикл  while.
 
 function t9() {
+    let out = '';
     let i91 = document.querySelector('.i-91').value;
     let i92 = document.querySelector('.i-92').value;
     let max = Math.max(i91, i92);
@@ -182,6 +190,7 @@ document.querySelector('.b-9').onclick = t9;
 // Разделитель знак подчеркивания. Задача решается через цикл, а четность - через шаг (равный 2).
 
 function t10() {
+    let out = '';
     let a = 1950;
     while (a < 1966) {
         out += `${a}_`;
@@ -202,6 +211,7 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
+    let out = '';
     let elems = document.querySelectorAll('div.div-11');
     let a = 0;
     while (a < elems.length) {
@@ -256,6 +266,7 @@ document.querySelector('.b-13').onclick = t13;
 
 
 function t14() {
+    let out = '';
     let elem = document.querySelectorAll('input.i-14');
     let i = 0;
     while (i < elem.length) {
@@ -275,6 +286,7 @@ document.querySelector('.b-14').onclick = t14;
 // Для вывода использовать цикл  while. Разделитель подчеркивание.
 
 function t15() {
+    let out = '';
     let a = 0;
     while (a < 3) {
         let z = 77;

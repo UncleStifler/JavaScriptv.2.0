@@ -6,9 +6,8 @@
 
 function t1() {
     let out = '';
-    for (let i = 0; i <= 16; i++) {
+    for (let i = 1; i <= 16; i++) {
         out += i + '_';
-
     }
     document.querySelector('.out-1').innerHTML = out;
 }
@@ -21,12 +20,9 @@ document.querySelector('.b-1').onclick = t1;
 //Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t2() {
-    let out1 = '';
-    let out2 = '';
+    let out = '';
     for (let i = 12; i <= 38; i += 2) {
-        i <= 20 ? out1 += i + '_' : '';
-        i >= 36 ? out2 += i + '_' : '';
-        out = `${out1} ... ${out2} `;
+        out += i + '_';
     }
     document.querySelector('.out-2').innerHTML = out;
 }
@@ -40,12 +36,9 @@ document.querySelector('.b-2').onclick = t2;
 // Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t3() {
-    let out1 = '';
-    let out2 = '';
+    let out = '';
     for (let i = 25; i >= 7; i--) {
-        i >= 22 ? out1 += i + '_' : '';
-        i <= 8 ? out2 += i + '_' : '';
-        out = `${out1} ... ${out2} `;
+        out += i + '_';
     }
     document.querySelector('.out-3').innerHTML = out;
 }
@@ -59,12 +52,9 @@ document.querySelector('.b-3').onclick = t3;
 
 
 function t4() {
-    let out1 = '';
-    let out2 = '';
+    let out = '';
     for (let i = 77; i >= 35; i -= 3) {
-        i >= 62 ? out1 += i + '_' : '';
-        i <= 38 ? out2 += i + '_' : '';
-        out = `${out1}  ...  _${out2} `;
+        out += i + '_';
     }
     document.querySelector('.out-4').innerHTML = out;
 }
@@ -219,7 +209,6 @@ function t11() {
         div += divs11[i].innerHTML + '_';
     }
     document.querySelector('.out-11').innerHTML = div;
-
 }
 
 document.querySelector('.b-11').onclick = t11;
@@ -264,7 +253,7 @@ function t14() {
     let elem = document.querySelectorAll('.i-14');
     for (let i = 0; i < elem.length; i++) {
         if (elem[i].checked) {
-            document.querySelector('.out-14').innerHTML = elem[i].value
+            document.querySelector('.out-14').innerHTML = elem[i].value;
         }
     }
 
@@ -278,10 +267,11 @@ document.querySelector('.b-14').onclick = t14;
 // Подсказка (10 - i) + '_' + i + '_'
 
 function t15() {
-    let out = ''
+    let out = '';
     for (let i = 0; i < 11; i++) {
-        out += (10 - i) + '_' + i + '_'
-    } document.querySelector('.out-15').innerHTML = out
+        out += (10 - i) + '_' + i + '_';
+    }
+    document.querySelector('.out-15').innerHTML = out;
 
 }
 

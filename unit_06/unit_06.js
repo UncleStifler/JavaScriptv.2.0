@@ -144,7 +144,7 @@ document.querySelector('.b-6').onclick = t6;
 
 function t7() {
     let out7 = '';
-    for (let i = 0; i <= 4; i++) {
+    for (let i = 0; i <= 3; i++) {
         if (i !== 0) {
             out7 += '<br>';
         }

@@ -126,7 +126,11 @@ function f8() {
     ar8[3] = 3.14;
     ar8[4] = 17;
     ar8[6] = 5;
-    document.querySelector('.out-8').innerHTML = ar8.join('-');
+    for (let i = 0; i < ar8.length; i++) {
+        out += ar8[i] + '-';
+    }
+    // document.querySelector('.out-8').innerHTML = ar8.join('-');
+    document.querySelector('.out-8').innerHTML = out;
     document.querySelector('.out-8-1').innerHTML = ar8.length.toString();
 }
 
@@ -208,7 +212,7 @@ let ar13 = ['test', 'west', 'list', 'class', 'best'];
 
 function f13() {
     for (let i = 0; i < ar13.length; i++) {
-        out += ` ${[i]} ${ar13[i]}`;
+        out += `${[i]} ${ar13[i]} `;
     }
     document.querySelector('.out-13').innerHTML = out;
 }
@@ -274,15 +278,13 @@ document.querySelector('.b-16').onclick = f16;
 // Вывод - по нажатию кнопки b-17
 // Вывод в out-17
 
-let ar17 = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
+let ar17 = [3, 99, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
 
 function f17() {
-    for (let i = 0; i < ar17.length; i++) {
-        if (ar17[i] > 3) {
-            out += ar17[i];
-        }
-    }
-    document.querySelector('.out-17').innerHTML = out.length.toString();
+
+    let out = ar17.filter(t => t > 3);
+    console.log(out);
+    document.querySelector('.out-17').innerHTML = out.length;
 }
 
 document.querySelector('.b-17').onclick = f17;
@@ -295,14 +297,16 @@ document.querySelector('.b-17').onclick = f17;
 // Вывод в out-18
 
 let ar18 = [15, 24, 13, 78, 21, 4, 45, 67];
-let max = ar18[0];
+
+// let max = ar18[0];
 
 function f18() {
-    for (let i = 0; i < ar18.length; i++) {
-        if (ar18[i] > max) {
-            max = ar18[i];
-        }
-    }
+    // for (let i = 0; i < ar18.length; i++) {
+    //     if (ar18[i] > max) {
+    //         max = ar18[i];
+    //     }
+    // }
+    let max = ar18.reduce((acc, item) => acc > item ? acc : item);
     document.querySelector('.out-18').innerHTML = max;
 }
 
@@ -316,15 +320,17 @@ document.querySelector('.b-18').onclick = f18;
 // Вывод в out-19
 
 let ar19 = [15, 424, 313, 78, 241, 4, 45, 67];
-let min = ar19[0];
+
+// let min = ar19[0];
 
 function f19() {
-    for (let i = 0; i < ar19.length; i++) {
-        if (ar19[i] < min) {
-            min = i
-        }
-    }
-    document.querySelector('.out-19').innerHTML = min
+    // for (let i = 0; i < ar19.length; i++) {
+    //     if (ar19[i] < min) {
+    //         min = i
+    //     }
+    // }
+
+    document.querySelector('.out-19').innerHTML = ar19.indexOf(Math.min.apply(null, ar19));
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -338,8 +344,8 @@ document.querySelector('.b-19').onclick = f19;
 let ar20 = [4, 5, 6, 7, 8, 9, 10];
 
 function f20() {
-    out = ar20.reduce((acc, item) =>  acc + item)
-    document.querySelector('.out-20').innerHTML = out
+    out = ar20.reduce((acc, item) => acc + item);
+    document.querySelector('.out-20').innerHTML = out;
 }
 
 document.querySelector('.b-20').onclick = f20;

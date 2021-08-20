@@ -46,11 +46,12 @@ document.querySelector('.b-3').onclick = f3;
 // Task 4. 
 // Пользователь вводит в .i-4 год своего рождения. Есть кнопка .b-4 которая запускает функцию f4.
 // Функция должна вывести в .out-4 число 1 если пользователю больше или равно 18 лет, и 0 если меньше.
+let out4 = document.querySelector('.out-4');
 
 function f4() {
-    let i4 = document.querySelector('.i-4').value;
-    let out4 = document.querySelector('.out-4');
-    i4 >= 18 ? out4.innerHTML = "1" : out4.innerHTML = "0";
+    let i4 = +document.querySelector('.i-4').value;
+    i4 >= 18 ? out4.innerHTML = 1 : out4.innerHTML = 0;
+    console.log(out4.innerHTML);
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -61,15 +62,18 @@ document.querySelector('.b-4').onclick = f4;
 // Функция должна вывести в .out-5 символ 'm' если число меньше нуля, 0 если число равно нулю и число 1 если больше.
 
 function f5() {
-    let i5 = document.querySelector('.i-5').value;
     let out5 = document.querySelector('.out-5');
+    let i5 = document.querySelector('.i-5').value;
     if (i5 < 0) {
         out5.innerHTML = 'm';
-    } else if (i5 === 0) {
-        out5.innerHTML = '0';
-    } else if (i5 >= 1) {
-        out5.innerHTML = '1';
+    } else if (i5 > 0) {
+        out5.innerHTML = 1;
+    } else if (i5 == 0) {
+        out5.innerHTML = 0;
     }
+
+
+    console.log(out5);
 }
 
 document.querySelector('.b-5').onclick = f5;
@@ -83,7 +87,7 @@ document.querySelector('.b-5').onclick = f5;
 function f6() {
     let i6 = document.querySelector('.i-6').value;
     let out6 = document.querySelector('.out-6');
-    i6 % 2 === 0 ? out6.innerHTML = 'odd' : out6.innerHTML = 'even';
+    i6 % 2 == 0 ? out6.innerHTML = 'odd' : out6.innerHTML = 'even';
 }
 
 document.querySelector('.b-6').onclick = f6;
