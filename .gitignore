@@ -26,3 +26,10 @@ yarn-error.log*
 *.zip
 *.iml
 .idea
+*.img
+/unit_11/img/6.png
+/unit_11/img/1.png
+/unit_11/img/4.png
+/unit_11/img/2.png
+/unit_11/img/3.png
+/unit_11/img/5.png
