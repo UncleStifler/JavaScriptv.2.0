@@ -27,6 +27,7 @@ yarn-error.log*
 *.iml
 .idea
 *.img
+/.img
 /unit_11/img/6.png
 /unit_11/img/1.png
 /unit_11/img/4.png
